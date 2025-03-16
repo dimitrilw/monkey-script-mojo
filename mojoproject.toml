@@ -1,0 +1,16 @@
+[project]
+authors = ["Dimitri <5898931+dimitrilw@users.noreply.github.com>"]
+channels = [
+    "https://conda.modular.com/max-nightly",
+    "https://conda.modular.com/max",
+    "https://repo.prefix.dev/modular-community",
+    "conda-forge",
+]
+name = "monkey-script-mojo"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+max = "*"
