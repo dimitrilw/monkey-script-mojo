@@ -30,7 +30,38 @@ Most code differences are *not* explained in these notes. Rather, I assume that 
 has a reasonable understanding of the Go language and can understand the differences
 between the book's Go examples and this repo's Mojo examples.
 
-## the "dumdum disclaimer"
+## the "Mojo isn't v1" disclaimer
+
+Since Mojo is still rapidly evolving, I plan to add "Mojo version stamps"
+to the various book sections, below. My hope is that this helps any reader (including myself)
+to understand how the code in this repo relates to the current state of Mojo.
+
+## the "dumdum" disclaimer
 
 I am not a Mojo expert. I am not a compiler expert.  My code will be a disaster.
 Follow along at your own risk. Thar be dragons here.
+
+## Writing an Interpreter in ~~Go~~ Mojo
+
+Again, please buy Thorsten's books.
+The Interpreter book is available [here](https://interpreterbook.com/).
+
+### 1 Lexing
+
+Until you see another Mojo version stamp, assume all code is written in Mojo v0.1.0.
+
+#### 1.1 Lexical Analysis (tag)
+
+I ran `magic init monkey-script-mojo --format mojoproject` to create the project.
+
+Looking forward, it is worth noting that there will be some differences in project structure.
+Thorsten's project uses solid Go file structure. This project will differ in that
+it will use Modular's suggested Mojo project structure. All Mojo code will be in the `src`
+directory. For example, the lexer code will not be in `lexer/lexer.go`, but rather
+it will be in `src/lexer/lexer.mojo`, or maybe just `src/lexer.mojo` (not sure).
+In addition, I will use
+[Modular's suggested test structure](https://docs.modular.com/mojo/tools/testing/).
+This means that test files will not be in the same directory as the code files,
+which is a common Go practice. Thorsten's book uses the file `lexer/lexer_test.go`;
+at the time I am writing this, I plan for this project to use
+`test/lexer/test_foo.mojo` and `test/lexer/test_bar.mojo`.
